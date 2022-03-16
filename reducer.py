@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 `reducer.py` reads the output of `mapper.py` from STDIN and sums the occurrences of every word. The counts are written
 to STDOUT.

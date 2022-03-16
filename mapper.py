@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 `mapper.py` reads data from STDIN, splits it into words, and outputs a list of lines mapping words to their
 (intermediate) counts to STDOUT. However, it will not compute a sum of the word's occurrences. The reducer script will
