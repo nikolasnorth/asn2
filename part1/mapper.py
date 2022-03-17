@@ -4,15 +4,15 @@
 (intermediate) counts to STDOUT. However, it will not compute a sum of the word's occurrences. The reducer script will
 do the final sum count.
 """
-
 import sys
 
+current_doc_id = ""
 
 for line in sys.stdin:
-    # Remove leading and trailing whitespace
     line = line.strip()
-    # Split the line into words
     words = line.split()
-    # Increase counters
+    if len(words) == 2 and words[0] == "ID":
+        current_doc_id = words[1]
+        continue
     for word in words:
-        print(f"{word}\t1")
+        print(f"{word}\t1\t{current_doc_id}")
